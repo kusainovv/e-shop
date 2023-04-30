@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .wrapper {
-  @apply container mx-auto px-5 lg:px-0;
+  @apply container px-5 mx-auto lg:px-0;
 }
 
 .linear-walkaways {
@@ -13,7 +13,7 @@
 }
 
 .counting-bubble {
-  @apply absolute -right-2 bottom-0 bg-black w-4 h-4 rounded-full flex justify-center items-center text-white text-xs;
+  @apply absolute bottom-0 flex items-center justify-center w-4 h-4 text-xs text-white bg-black rounded-full -right-2;
 }
 
 /* HOME SLIDE */
@@ -22,7 +22,7 @@
 }
 .cta-btn::before {
   content: "";
-  @apply top-0 left-0 right-0 bottom-0 absolute bg-rose-900 w-0 duration-300 z-10;
+  @apply absolute top-0 bottom-0 left-0 right-0 z-10 w-0 duration-300 bg-rose-900;
 }
 
 .cta-btn:hover::before {
@@ -38,7 +38,7 @@
 }
 
 .navigators-btn {
-  @apply h-14 w-20 flex justify-center items-center bg-rose-900 text-rose-200 border border-rose-200 hover:bg-gray-900 hover:text-gray-200 hover:border-gray-200 duration-300;
+  @apply flex items-center justify-center w-20 duration-300 border h-14 bg-rose-900 text-rose-200 border-rose-200 hover:bg-gray-900 hover:text-gray-200 hover:border-gray-200;
 }
 
 .slide {
@@ -46,7 +46,7 @@
 }
 
 .section-title {
-  @apply text-3xl lg:text-5xl uppercase font-thin;
+  @apply text-3xl font-thin uppercase lg:text-5xl;
 }
 
 /* MOBILE NAV */
@@ -64,23 +64,36 @@
   background-image: url(https://cdn.pixabay.com/photo/2017/05/17/04/03/golden-apple-2319790_960_720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  @apply flex-1 aspect-square flex items-center justify-center relative;
+  @apply relative flex items-center justify-center flex-1 aspect-square;
+}
+
+.sq-bag {
+  background-image: url(https://ae01.alicdn.com/kf/HLB1FjHyXzzuK1RjSsppq6xz0XXaO/AEQUEEN-Women-Handbag-Casual-Tote-Bag-Female-Large-Shoulder-Messenger-Bags-High-Quality-Suede-Leather-Hand.jpg);
+}
+.sq-wallet {
+  background-image: url(https://cs2.livemaster.ru/storage/ef/58/416489288f96accb9cb808f432g2--sumki-i-aksessuary-koshelek-kozha-krejzi-hors-temno-sinij-na-.jpg);
+}
+.sq-belt {
+  background-image: url(https://2.allegroimg.com/s1440/03c887/bd0d9ecd4e2c880f507e014fe9b2);
+}
+.sq-travel-bag {
+  background-image: url(https://cs1.livemaster.ru/storage/dd/8d/6d43eaaf72e63a2ee69a6363f7c1--sumki-i-aksessuary-dorozhnaya-muzhskaya-kozhanaya-sumka-sport.jpg);
 }
 
 .sq-women {
   background-image: url(https://cdn.pixabay.com/photo/2017/09/20/10/29/beautiful-2768032_960_720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  @apply flex-1 aspect-square flex items-center justify-center relative;
+  @apply relative flex items-center justify-center flex-1 aspect-square;
 }
 
 .category-title-men,
 .category-title-women {
-  @apply text-6xl text-gray-100 font-medium uppercase z-20 hidden duration-500 ease-in-out;
+  @apply z-20 hidden text-6xl font-medium text-gray-100 uppercase duration-500 ease-in-out;
 }
 
 .overlay {
-  @apply absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 duration-500 bg-gray-800 z-10 ease-in-out;
+  @apply absolute top-0 bottom-0 left-0 right-0 z-10 w-full h-full duration-500 ease-in-out bg-gray-800 opacity-0;
 }
 
 .sq-men:hover .overlay,
@@ -96,7 +109,7 @@
 /* FOOTER AREA */
 
 .icon-circle {
-  @apply h-10 w-10 bg-rose-700 rounded-full flex items-center duration-300 cursor-pointer;
+  @apply flex items-center w-10 h-10 duration-300 rounded-full cursor-pointer bg-rose-700;
 }
 .icon-circle:hover {
   @apply bg-rose-800;
@@ -106,11 +119,11 @@
   @apply duration-300;
 }
 .footer-nav-links:hover {
-  @apply text-rose-500 duration-300;
+  @apply duration-300 text-rose-500;
 }
 
 .social-icons {
-  @apply flex gap-4 mt-3 justify-center;
+  @apply flex justify-center gap-4 mt-3;
 }
 
 /* image gallery design */

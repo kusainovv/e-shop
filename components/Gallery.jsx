@@ -20,12 +20,12 @@ const data = [
   },
   {
     id: 4,
-    src: "https://images.pexels.com/photos/2453823/pexels-photo-2453823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "https://kingdoodle.com/wp-content/uploads/2019/12/Red_Printo.jpg",
     title: "Men pants",
   },
   {
     id: 5,
-    src: "https://images.pexels.com/photos/7473356/pexels-photo-7473356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "https://kingdoodle.com/wp-content/uploads/2019/12/Red_Printo.jpg",
     title: "Women pants",
   },
   {
@@ -40,7 +40,7 @@ const data = [
   },
   {
     id: 8,
-    src: "https://images.pexels.com/photos/4637874/pexels-photo-4637874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "https://kingdoodle.com/wp-content/uploads/2019/12/Red_Printo.jpg",
     title: "Men shoes",
   },
   {
@@ -57,16 +57,16 @@ const data = [
 
 const Gallery = () => {
   return (
-    <div className="wrapper image-container my-20">
-      <div className="text-center mb-10 flex flex-col gap-5">
+    <div className="my-20 wrapper image-container">
+      <div className="flex flex-col gap-5 mb-10 text-center">
         <span className="font-medium tracking-widest">{`LET'S SEE`}</span>
         <span className="section-title">GALLERY OF THE EUPHORIA</span>
         <Link
           href="/products"
-          className="self-center font-medium tracking-widest flex gap-2 items-center group"
+          className="flex items-center self-center gap-2 font-medium tracking-widest group"
         >
           SHOP NOW{" "}
-          <span className="group-hover:translate-x-5 duration-300">
+          <span className="duration-300 group-hover:translate-x-5">
             <BsArrowRight />
           </span>
         </Link>

@@ -61,7 +61,7 @@ const AboutPage = () => {
 
       <div className="wrapper">
         <div className="my-20 text-center">
-          <p className="tracking-widest font-semibold uppercase text-xl p-5 text-black">
+          <p className="p-5 text-xl font-semibold tracking-widest text-black uppercase">
             euphoria, the new era begins!
           </p>
           <p className="text-4xl px-[20rem] pb-5 font-extralight">
@@ -83,7 +83,7 @@ const AboutPage = () => {
           <ImageAbout />
         </div>
 
-        <div className="grid grid-cols-2 justify-center items-start p-20">
+        <div className="grid items-start justify-center grid-cols-2 p-20">
           <div className="text-4xl px-[5rem] pb-5 font-extralight">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
@@ -114,12 +114,12 @@ const AboutPage = () => {
           width={500}
           height={500}
           alt={"Happy woman jumping with shopping bags"}
-          className="w-full h-auto object-cover"
+          className="object-cover w-full h-auto"
         />
       </div>
 
-      <div className="wrapper py-10 flex flex-col gap-10">
-        <p className="tracking-widest font-semibold uppercase text-xl p-5 text-black text-center">
+      <div className="flex flex-col gap-10 py-10 wrapper">
+        <p className="p-5 text-xl font-semibold tracking-widest text-center text-black uppercase">
           Partners
         </p>
 

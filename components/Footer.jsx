@@ -8,78 +8,69 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="text-gray-300 bg-black py-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-20 wrapper w-full gap-16 md:gap-10 lg:gap-5 xl:gap-10 2xl:px-20 ">
-        <div className="footer-col-1 flex flex-col items-start">
+    <footer className="py-20 text-gray-300 bg-black">
+      <div className="grid w-full grid-cols-1 gap-16 pb-20 md:grid-cols-2 lg:grid-cols-4 wrapper md:gap-10 lg:gap-5 xl:gap-10 2xl:px-20 ">
+        <div className="flex flex-col items-start footer-col-1">
           <Link
             href="/"
-            className="text-4xl md:text-2xl font-semibold text-rose-500 hover:text-white duration-300"
+            className="text-4xl font-semibold duration-300 md:text-2xl text-rose-500 hover:text-white"
           >
-            euphoria.
+            Магазин Кожи.
           </Link>
         </div>
-        <div className="footer-col-2 flex flex-col items-start">
-          <p className="follow-text uppercase tracking-wider text-gray-400">{`Don't forget to follow us`}</p>
+        <div className="flex flex-col items-start footer-col-2">
+          <p className="tracking-wider text-gray-400 uppercase follow-text">{`Следите за нами в соц. сетях`}</p>
           <div className="social-icons">
             <div className="icon-circle">
-              <FaFacebookF className="text-rose-100 mx-auto" />
+              <FaFacebookF className="mx-auto text-rose-100" />
             </div>
             <div className="icon-circle">
-              <FaInstagram className="text-rose-100 mx-auto" />
+              <FaInstagram className="mx-auto text-rose-100" />
             </div>
             <div className="icon-circle">
-              <FaLinkedinIn className="text-rose-100 mx-auto" />
+              <FaLinkedinIn className="mx-auto text-rose-100" />
             </div>
             <div className="icon-circle">
-              <FaTwitter className="text-rose-100 mx-auto" />
+              <FaTwitter className="mx-auto text-rose-100" />
             </div>
           </div>
         </div>
-        <div className="footer-col-3 flex flex-col items-start">
-          <p className="uppercase font-medium text-rose-500 tracking-wider">
-            Useful Links
+        <div className="flex flex-col items-start footer-col-3">
+          <p className="font-medium tracking-wider uppercase text-rose-500">
+            Навигация
           </p>
-          <div className="nav-link flex flex-col-2 mt-3 gap-10 justify-start">
-            <div className="link-col-left flex flex-col text-left gap-1 uppercase">
+          <div className="flex justify-start gap-10 mt-3 nav-link flex-col-2">
+            <div className="flex flex-col gap-1 text-left uppercase link-col-left">
               <Link href="/" className="footer-nav-links">
-                Home
+                Главная
               </Link>
               <Link href="/products" className="footer-nav-links">
-                Shop
-              </Link>
-              <Link href="/products/men" className="footer-nav-links">
-                Men
-              </Link>
-              <Link href="/products/women" className="footer-nav-links">
-                Women
+                Магазин
               </Link>
             </div>
-            <div className="link-col-right flex flex-col text-left gap-1 uppercase">
-              <Link href="/inventory" className="footer-nav-links">
-                Inventory
-              </Link>
+            <div className="flex flex-col gap-1 text-left uppercase link-col-right">
               <Link href="/about" className="footer-nav-links">
-                About
+                О Магазине
               </Link>
               <Link href="/contact" className="footer-nav-links">
-                Contact
+                Контакты
               </Link>
             </div>
           </div>
         </div>
-        <div className="footer-col-4 flex flex-col items-start xl:items-center gap-3">
-          <p className="uppercase tracking-wider text-gray-400">
-            Need more informations?
+        <div className="flex flex-col items-start gap-3 footer-col-4 xl:items-center">
+          <p className="tracking-wider text-gray-400 uppercase">
+            Нужна консультация?
           </p>
-          <button className="footer-btn bg-rose-700 py-4 px-6 rounded-full uppercase text-sm font-medium hover:text-rose-500 hover:bg-rose-50 duration-300">
-            + New Message
+          <button className="px-6 py-4 text-sm font-medium uppercase duration-300 rounded-full footer-btn bg-rose-700 hover:text-rose-500 hover:bg-rose-50">
+            + Написать сообщение
           </button>
-          <p className="font-medium text-lg">contact@euphoria.com</p>
+          <p className="text-lg font-medium">contact@euphoria.com</p>
         </div>
       </div>
 
-      <p className="copyright border-t border-gray-500/40 pt-20 text-gray-400 wrapper text-center uppercase">
-        &copy; {new Date().getFullYear()} Euphoria. All rights reserved.
+      <p className="pt-20 text-center text-gray-400 uppercase border-t copyright border-gray-500/40 wrapper">
+        &copy; {new Date().getFullYear()} Магазин Кожи. Все права сохранены.
       </p>
     </footer>
   );

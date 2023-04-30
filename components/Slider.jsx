@@ -5,27 +5,17 @@ import Slide from "./Slide";
 const data = [
   {
     id: 1,
-    src: "https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    headline: "Unleash Your Style",
-    body: "Shop the Latest Trends on Our Fashion Website & discover your fashion identity today! ",
-    cta: "Browse our collections !",
-    category: "",
+    src: "https://www.javaid-leather.ru/images/slider/naturalnaya-kozha_8.jpg",
+    headline: "Натуральная кожа для пошива изделий",
+    body: "Натуральная кожа для пошива изделий по цене производителя. Новые коллекции кожевенных заводов Италии, Турции и Кореи в Москве в магазине Javaid Leather на Щербаковской.",
+    cta: "Поспешите!",
   },
   {
     id: 2,
-    src: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    headline: "Be a Fashion Icon",
-    body: "Stay on Top of the Latest Mens Fashion Trends. Upgrade your wardrobe with our newest arrivals. Shop now and unleash your inner fashionista.",
-    cta: "View Mens Collection !",
-    category: "men",
-  },
-  {
-    id: 3,
-    src: "https://images.pexels.com/photos/1500482/pexels-photo-1500482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    headline: "Elegance Redefined",
-    body: "Discover Timeless Fashion. Step into a world of sophistication and grace. Shop our classical women's fashion collection today.",
-    cta: "Browse ladies collection !",
-    category: "women",
+    src: "https://www.javaid-leather.ru/images/slider/naturalnaya-kozha_5.jpg",
+    headline: "Черная кожа - наш выбор!",
+    body: "Черный цвет. Элегантный. Красивый",
+    cta: "Черная кожа",
   },
 ];
 
@@ -41,7 +31,7 @@ const Slider = () => {
   }, [curSlide]);
 
   return (
-    <div className="frame relative overflow-x-hidden">
+    <div className="relative overflow-x-hidden frame">
       <div
         className="slider"
         style={{

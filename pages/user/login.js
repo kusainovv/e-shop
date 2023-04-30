@@ -26,16 +26,16 @@ const LoginPage = ({ session }) => {
 
   if (!session) {
     return (
-      <div className="min-h-screen my-20 flex flex-col gap-5 items-center">
-        <h2 className="section-title">You are not signed in.</h2>
+      <div className="flex flex-col items-center min-h-screen gap-5 my-20">
+        <h2 className="section-title">Вы не залогинены</h2>
         <button
           onClick={loginWithGoogle}
-          className="bg-gray-900 text-white h-12 w-72 hover:opacity-80 duration-300 flex items-center justify-center gap-2 font-medium uppercase"
+          className="flex items-center justify-center h-12 gap-2 font-medium text-white uppercase duration-300 bg-gray-900 w-72 hover:opacity-80"
         >
           <span>
             <FcGoogle />
           </span>{" "}
-          Sign in with Google
+          Логин
         </button>
       </div>
     );

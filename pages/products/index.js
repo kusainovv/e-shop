@@ -4,7 +4,7 @@ import ProductItem from "@/components/ProductItem";
 const ProductsPage = ({ products }) => {
   return (
     <div className="flex flex-col gap-10 my-20 wrapper">
-      <h2 className="section-title">Browse all products</h2>
+      <h2 className="section-title">Все товары</h2>
 
       <div className="grid grid-cols-1 gap-10 products md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product) => (

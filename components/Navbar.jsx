@@ -22,10 +22,10 @@ const Navbar = () => {
   }, [toggleOpen]);
 
   return (
-    <header className="wrapper h-20 flex items-center justify-between">
+    <header className="flex items-center justify-between h-20 wrapper">
       <div className="logo">
         <Link href="/" className="text-2xl font-semibold">
-          euphoria.
+          Магазин Кожи
         </Link>
       </div>
 
@@ -37,50 +37,35 @@ const Navbar = () => {
         >
           <li>
             <Link href="/" className="linear-walkaways">
-              Home
+              Главная
             </Link>
           </li>
           <li>
             <Link href="/products" className="linear-walkaways">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link href="/products/men" className="linear-walkaways">
-              Men
-            </Link>
-          </li>
-          <li>
-            <Link href="/products/women" className="linear-walkaways">
-              Women
-            </Link>
-          </li>
-          <li>
-            <Link href="/inventory" className="linear-walkaways">
-              Inventory
+              Магазин
             </Link>
           </li>
           <li>
             <Link href="/about" className="linear-walkaways">
-              About
+              О Магазине
             </Link>
           </li>
           <li>
             <Link href="/contact" className="linear-walkaways">
-              Contact
+              Контакты
             </Link>
           </li>
         </ul>
       </nav>
 
-      <div className="nav-links-right flex gap-5">
+      <div className="flex gap-5 nav-links-right">
         {!session ? (
           <Link href="/user/login" className="uppercase linear-walkaways">
-            Sign in
+            Войти
           </Link>
         ) : (
           <Link href="/user/profile" className="uppercase linear-walkaways">
-            Profile
+            Профиль
           </Link>
         )}
 
