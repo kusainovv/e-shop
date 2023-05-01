@@ -15,8 +15,8 @@ const CartItem = ({ product }) => {
         <Image
           priority
           unoptimized
-          loader={() => product.imageUrl}
-          src={product.imageUrl}
+          loader={() => product.img}
+          src={product.img}
           width={270}
           height={270}
           alt={product.title}
@@ -35,7 +35,7 @@ const CartItem = ({ product }) => {
       <p className="text-center unit-price">{formatCurrency(product.price)}</p>
       <p className="text-center quantity">{product.quantity}</p>
       <div className="ml-auto total-price">
-        <span>{formatCurrency(product.price * product.quantity)}</span>
+        <span>{+product.price.split(',')[0].replace(/\D+/g, '') * product.quantity}руб</span>
       </div>
     </div>
   );
