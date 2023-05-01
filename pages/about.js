@@ -5,9 +5,9 @@ import Image from "next/image";
 const AboutPage = () => {
   const logos = [
     {
-      id: 1,
+      id: 2,
       src: "https://static.vecteezy.com/system/resources/previews/001/192/065/original/circle-logo-turbine-png.png",
-      title: "logo1",
+      title: "logo2",
     },
     {
       id: 2,
@@ -42,12 +42,8 @@ const AboutPage = () => {
         <Image
           priority
           unoptimized
-          loader={() =>
-            "https://images.pexels.com/photos/242829/pexels-photo-242829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          }
-          src={
-            "https://images.pexels.com/photos/242829/pexels-photo-242829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          }
+          loader={() => "https://i.postimg.cc/QN53SCr8/XXL-1.webp"}
+          src={"https://i.postimg.cc/QN53SCr8/XXL-1.webp"}
           width={50}
           height={25}
           alt={"Man Riding on Motorcycle"}
@@ -55,27 +51,27 @@ const AboutPage = () => {
         />
 
         <p className="text-center absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-white text-8xl">
-          About Euphoria
+          О Магазине
         </p>
       </div>
 
       <div className="wrapper">
         <div className="my-20 text-center">
           <p className="p-5 text-xl font-semibold tracking-widest text-black uppercase">
-            euphoria, the new era begins!
+            Магазин Кожи
           </p>
           <p className="text-4xl px-[20rem] pb-5 font-extralight">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo placeat
-            culpa totam sit dolorem a rerum quasi nam!
+            {`Мы "Магазин Кожи", который предлагает Вам огромный ассортимент
+            кожанных изделий`}
           </p>
           <p className="px-[15rem] pb-5 text-xl font-light">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-            ut est quisquam, laboriosam, temporibus sed veniam error molestias
-            ducimus esse alias nisi? Corporis eligendi est amet, provident sit
-            laboriosam modi? Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Voluptatem ut est quisquam, laboriosam, temporibus sed veniam
-            error molestias ducimus esse alias nisi? Corporis eligendi est amet,
-            provident sit laboriosam modi?
+            {`Натуральная кожа для пошива изделий по цене производителя. Новые
+            коллекции кожевенных заводов Италии, Турции и Кореи в Москве в
+            магазине "Магазин Кожи" на Орджоникидзе. Покупайте шкурки
+            натуральной кожи в розницу от одной пластины или оптом от одного
+            рулона. Выбирайте в нашем каталоге и собирайте в корзину ваш
+            онлайн-заказ. Мы посчитаем его стоимость, упакуем и доставим кожу в
+            любую точку России.`}
           </p>
         </div>
 
@@ -85,47 +81,26 @@ const AboutPage = () => {
 
         <div className="grid items-start justify-center grid-cols-2 p-20">
           <div className="text-4xl px-[5rem] pb-5 font-extralight">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-              dicta magnam fugiat ullam saepe accusamus quasi. Rerum facere
-              laborum quos nulla.
-            </p>
+            <p>Это фотографии нашего магазина.</p>
           </div>
           <div className="px-[5rem] pb-5 text-xl font-light">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              a quidem ipsa at iure ipsam accusantium in reiciendis voluptatem
-              exercitationem, dicta quae optio repellendus voluptas nesciunt sit
-              maiores non molestiae id corrupti distinctio maxime natus.
+              <b>
+                Чтобы найти наш магазин, вам нужно подойти ко 2-му подъезду со
+                стороны двора.
+              </b>
             </p>
           </div>
         </div>
       </div>
-      <div className="py-12">
-        <Image
-          priority
-          unoptimized
-          loader={() =>
-            "https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          }
-          src={
-            "https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          }
-          width={500}
-          height={500}
-          alt={"Happy woman jumping with shopping bags"}
-          className="object-cover w-full h-auto"
-        />
-      </div>
 
       <div className="flex flex-col gap-10 py-10 wrapper">
         <p className="p-5 text-xl font-semibold tracking-widest text-center text-black uppercase">
-          Partners
+          Партнеры
         </p>
 
         <p className="text-4xl px-[5rem] pb-5 font-extralight text-center">
-          We are very grateful for the opportunity to collaborate with such
-          beautiful agencies and brands
+          У нас много партнеров, которым мы предлагаем наши услуги
         </p>
 
         <div className="p-10">

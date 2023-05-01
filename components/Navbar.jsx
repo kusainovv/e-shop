@@ -42,7 +42,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/products" className="linear-walkaways">
-              Магазин
+              Товары
             </Link>
           </li>
           <li>

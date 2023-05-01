@@ -17,24 +17,24 @@ const CartItem = ({ product }) => {
           unoptimized
           loader={() => product.imageUrl}
           src={product.imageUrl}
-          width={500}
-          height={500}
+          width={270}
+          height={270}
           alt={product.title}
-          className="img w-24 h-24 object-cover"
+          className="object-cover w-24 h-24 img"
         />
-        <div className="details flex flex-col items-start gap-2">
+        <div className="flex flex-col items-start gap-2 details">
           <span>{product.title}</span>
           <button
             onClick={() => dispatch(removeItem(product))}
-            className="linear-walkaways uppercase text-gray-400"
+            className="text-gray-400 uppercase linear-walkaways"
           >
-            Remove
+            Удалить
           </button>
         </div>
       </div>
-      <p className="unit-price text-center">{formatCurrency(product.price)}</p>
-      <p className="quantity text-center">{product.quantity}</p>
-      <div className="total-price ml-auto">
+      <p className="text-center unit-price">{formatCurrency(product.price)}</p>
+      <p className="text-center quantity">{product.quantity}</p>
+      <div className="ml-auto total-price">
         <span>{formatCurrency(product.price * product.quantity)}</span>
       </div>
     </div>

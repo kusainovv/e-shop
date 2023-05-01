@@ -1,18 +1,22 @@
 import { useCallback, useState } from "react";
-import { getProduct } from "@/prisma/products";
+// import { getProduct } from "@/prisma/products";
 import { addToCart } from "@/store/productSlice";
 import { useDispatch } from "react-redux";
 import { formatCurrency } from "@/utils/formatCurrency";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
+import { formatColor } from "@/utils/formatColor";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ products, productId }) => {
   const [quantity, setQuantity] = useState(1);
 
+  const product = products.filter(product => +product.id === productId)[0];
+  console.warn(product)
   const handleDecrease = useCallback(() => {
     setQuantity(quantity === 1 ? 1 : (prev) => prev - 1);
   }, [quantity]);
-
+  
   const handleIncrease = useCallback(() => {
     setQuantity((prev) => prev + 1);
   }, []);
@@ -20,40 +24,41 @@ const ProductDetails = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="wrapper my-10 grid lg:grid-cols-2 gap-10">
-      <Image
-        priority
-        unoptimized
-        loader={() => product.imageUrl}
-        src={product.imageUrl}
+    <div className="grid gap-10 my-10 wrapper lg:grid-cols-2">
+      <div
         width={500}
         height={500}
         alt={product.title}
-        className="w-full h-full object-cover"
+        style={{
+          backgroundImage: `url(${product.img})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center'
+        }}
+        className="object-cover w-full h-full"
       />
 
       <div className="flex flex-col gap-5">
-        <span className="uppercase tracking-widest font-semibold text-sm text-cyan-500">
+        <span className="text-sm font-semibold tracking-widest uppercase text-cyan-500">
           {product.category}
         </span>
         <h2 className="text-4xl">{product.title}</h2>
-        <div className="flex gap-10 items-center">
-          <p className="text-2xl text-rose-500 font-medium">
-            {formatCurrency(product.price * quantity)}
+        <div className="flex items-center gap-10">
+          <p className="text-2xl font-medium text-rose-500">
+            {product.price}
           </p>
-          <div className="counter flex items-center bg-gray-100 text-2xl">
+          <div className="flex items-center text-2xl bg-gray-100 counter">
             <button
               onClick={handleDecrease}
-              className="bg-gray-700 text-white h-10 w-10 flex items-center justify-center hover:bg-cyan-500 duration-300"
+              className="flex items-center justify-center w-10 h-10 text-white duration-300 bg-gray-700 hover:bg-cyan-500"
             >
               -
             </button>
-            <span className="h-10 w-10 flex items-center justify-center">
+            <span className="flex items-center justify-center w-10 h-10">
               {quantity}
             </span>
             <button
               onClick={handleIncrease}
-              className="bg-gray-700 text-white h-10 w-10 flex items-center justify-center hover:bg-cyan-500 duration-300"
+              className="flex items-center justify-center w-10 h-10 text-white duration-300 bg-gray-700 hover:bg-cyan-500"
             >
               +
             </button>
@@ -62,13 +67,18 @@ const ProductDetails = ({ product }) => {
         <Link
           onClick={() => dispatch(addToCart({ ...product, quantity }))}
           href="/cart"
-          className="bg-cyan-500 text-center py-3 text-white text-xl font-medium hover:bg-cyan-600 duration-300 mt-5"
+          className="py-3 mt-5 text-xl font-medium text-center text-white duration-300 bg-cyan-500 hover:bg-cyan-600"
         >
-          Add to Cart
+          В Корзину
         </Link>
         <div className="mt-5">
-          <p className="font-medium mb-3">Description:</p>
-          <p className="text-gray-500">{product.description}</p>
+          <p className="mb-3 font-medium">Тип:</p>
+          <p className="text-gray-500">{product.type.replace('_', ' ')}</p>
+        </div>
+
+        <div className="mt-5">
+          <p className="mb-3 font-medium">Цвет:</p>
+          <p className="text-gray-500"><b>{formatColor(product.color)}</b></p>
         </div>
       </div>
     </div>
@@ -77,18 +87,14 @@ const ProductDetails = ({ product }) => {
 
 export default ProductDetails;
 
-export const getServerSideProps = async ({ query }) => {
-  const product = await getProduct(query.productId);
-
-  const updatedProduct = {
-    ...product,
-    updatedAt: product.updatedAt.toString(),
-    createdAt: product.createdAt.toString(),
-  };
+export const getServerSideProps = async (params) => {
+  
+  const products = await axios.get('http://90.156.225.217:3000').then(r => r.data[0]);
 
   return {
     props: {
-      product: updatedProduct,
+      products,
+      productId: +params.query.productId,
     },
   };
 };

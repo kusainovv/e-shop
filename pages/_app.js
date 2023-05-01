@@ -13,15 +13,7 @@ export default function App({ Component, pageProps, session }) {
   return (
     <>
       <Head>
-        <title>Euphoria - Shop Trendy and Affordable Clothing Online</title>
-        <meta
-          name="description"
-          content="Euphoria is your destination for affordable and fashionable clothing online. Browse our collection of trendy women's and men's clothing today!"
-        />
-        <meta
-          name="keywords"
-          content="Euphoria, clothing, fashion, online shopping, women's clothing, men's clothing"
-        />
+        <title>Магазин Кожи</title>
       </Head>
 
       <SessionProvider session={session}>

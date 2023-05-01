@@ -47,42 +47,42 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="my-20 wrapper min-h-screen">
-      <h2 className="section-title">Contact Us</h2>
+    <div className="min-h-screen my-20 wrapper">
+      <h2 className="section-title">Свяжитесь с нами</h2>
 
       <div className="flex mt-10">
-        <div className="flex flex-col lg:flex-row w-full gap-10">
+        <div className="flex flex-col w-full gap-10 lg:flex-row">
           <form onSubmit={sendEmail} className="w-full flex-[1]" ref={formRef}>
             <div className="gap-3">
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className="block text-gray-700 mb-2 uppercase"
+                  className="block mb-2 text-gray-700 uppercase"
                 >
-                  Name
+                  Имя
                 </label>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Write your name"
+                  placeholder="Напишите свое имя"
                   required
-                  className="name appearance-none w-full p-4 outline-none text-gray-700  border border-gray-300 focus:border-gray-600 duration-300"
+                  className="w-full p-4 text-gray-700 duration-300 border border-gray-300 outline-none appearance-none name focus:border-gray-600"
                 />
               </div>
 
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block text-gray-700 mb-2 uppercase"
+                  className="block mb-2 text-gray-700 uppercase"
                 >
-                  Email
+                  Почта
                 </label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="Write your email"
+                  placeholder="Напишите свою почту"
                   required
-                  className="email appearance-none w-full p-4 outline-none text-gray-700  border border-gray-300 focus:border-gray-600 duration-300"
+                  className="w-full p-4 text-gray-700 duration-300 border border-gray-300 outline-none appearance-none email focus:border-gray-600"
                 />
               </div>
             </div>
@@ -90,48 +90,48 @@ const ContactPage = () => {
             <div className="mb-4">
               <label
                 htmlFor="message"
-                className="block text-gray-700 mb-2 uppercase"
+                className="block mb-2 text-gray-700 uppercase"
               >
-                Message
+                Сообщение
               </label>
               <textarea
                 name="message"
-                placeholder="Write your message"
+                placeholder="Напишите ваше сообщение"
                 required
-                className="message appearance-none w-full p-4 outline-none text-gray-700  border border-gray-300 focus:border-gray-600 duration-300 resize-none h-40"
+                className="w-full h-40 p-4 text-gray-700 duration-300 border border-gray-300 outline-none appearance-none resize-none message focus:border-gray-600"
               />
             </div>
             <input
               required
-              className="bg-black hover:opacity-80 text-white py-5 px-10 uppercase duration-300 cursor-pointer"
+              className="px-10 py-5 text-white uppercase duration-300 bg-black cursor-pointer hover:opacity-80"
               type="submit"
-              value="Submit"
+              value="Отправить"
             />
           </form>
 
           <div className="right flex flex-col gap-5 flex-[1]">
             <div>
-              <p className="font-medium uppercase text-lg">
-                Return address for online orders:
+              <p className="text-lg font-medium uppercase">
+                Адресс для возврата кожи
               </p>
-              <p>1600 Pennsylvania Ave NW, Washington, DC 20500</p>
+              <p>г. Саратов, ул. Орджоникидзе, д. 54</p>
             </div>
             <div>
-              <p className="font-medium uppercase text-lg">Phone Number:</p>
-              <p className="text-rose-500 underline underline-offset-2">
-                012-345-6789
-              </p>
-            </div>
-            <div>
-              <p className="font-medium uppercase text-lg">Email Adress:</p>
-              <p className="text-rose-500 underline underline-offset-2">
-                contact@euphoria.com
+              <p className="text-lg font-medium uppercase">Номер телефона:</p>
+              <p className="underline text-rose-500 underline-offset-2">
+                8 827 555 21 53
               </p>
             </div>
             <div>
-              <p className="font-medium uppercase text-lg">Opening Hours:</p>
-              <p>Mon-Sat: 10:00am - 8:00pm</p>
-              <p>Sun: 11:00am - 9:00pm</p>
+              <p className="text-lg font-medium uppercase">Почта:</p>
+              <p className="underline text-rose-500 underline-offset-2">
+                магазин_кожи@yandex.com
+              </p>
+            </div>
+            <div>
+              <p className="text-lg font-medium uppercase">График работы:</p>
+              <p>Пн-Сб: 10:00 - 20:00</p>
+              <p>Cб: 11:00 - 21:00</p>
             </div>
           </div>
         </div>
