@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProductItem = ({ product }) => {
-  console.warn(product)
   return (
     <div className="flex flex-col gap-3 w-full md:w-[20rem] border-b pb-3">
       <Image

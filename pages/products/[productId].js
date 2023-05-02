@@ -12,7 +12,6 @@ const ProductDetails = ({ products, productId }) => {
   const [quantity, setQuantity] = useState(1);
 
   const product = products.filter(product => +product.id === productId)[0];
-  console.warn(product)
   const handleDecrease = useCallback(() => {
     setQuantity(quantity === 1 ? 1 : (prev) => prev - 1);
   }, [quantity]);
