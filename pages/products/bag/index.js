@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const ProductsPage = ({ products, title }) => {
-  const [productsResult, setProductsResult] = useState(products);
+  const [productsResult, setProductsResult] = useState(products.filter(product => product.type === 'сумка'));
   const [searchValue, setSearchValue] = useState("");
   return (
     <div className="flex flex-col gap-10 my-20 wrapper">
@@ -18,13 +18,13 @@ const ProductsPage = ({ products, title }) => {
           onChange={(e) => {
             if (!e.target.value.length) {
               axios.get(`http://90.156.225.217:3000`).then((r) => {
-                setProductsResult(r.data[0]);
+                setProductsResult(r.data[0].filter(product => product.type === 'сумка'));
               });
             } else {
               axios
                 .get(`http://90.156.225.217:3000/find/${e.target.value}`)
                 .then((r) => {
-                  setProductsResult(r.data[0]);
+                  setProductsResult(r.data[0].filter(product => product.type === 'сумка'));
                   setSearchValue(e.target.value);
                 });
             }
@@ -49,7 +49,7 @@ const ProductsPage = ({ products, title }) => {
               axios
                 .get(`http://90.156.225.217:3000/find/${searchValue}`)
                 .then((r) => {
-                  setProductsResult(r.data[0]);
+                  setProductsResult(r.data[0].filter(product => product.type === 'сумка'));
                 });
             } else {
               setProductsResult(

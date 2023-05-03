@@ -104,6 +104,7 @@
 .sq-men:hover .category-title-men,
 .sq-women:hover .category-title-women {
   @apply block;
+  font-size: 22px;
 }
 
 /* FOOTER AREA */

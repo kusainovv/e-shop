@@ -11,22 +11,22 @@ const Category = () => {
             <p>Сумка</p>
           </h3>
         </Link>
-        <Link href={"products/women"} className="sq-men sq-wallet">
+        <Link href={"products/wallet"} className="sq-men sq-wallet">
           <div className="overlay"></div>
           <h3 className="category-title-men">
             <p>Кошелек</p>
           </h3>
         </Link>
-        <Link href={"products/women"} className="sq-men sq-belt">
+        <Link href={"products/belt"} className="sq-men sq-belt">
           <div className="overlay"></div>
           <h3 className="category-title-men">
             <p>Ремень</p>
           </h3>
         </Link>
-        <Link href={"products/women"} className="sq-men sq-travel-bag">
+        <Link href={"products/travel_bag"} className="sq-men sq-travel-bag">
           <div className="overlay"></div>
-          <h3 className="category-title-men">
-            <p>Пальто</p>
+          <h3 className="p-3 category-title-men">
+            <p>дорожная сумка</p>
           </h3>
         </Link>
       </div>
