@@ -59,8 +59,6 @@ const Gallery = () => {
   return (
     <div className="my-20 wrapper image-container">
       <div className="flex flex-col gap-5 mb-10 text-center">
-        <span className="font-medium tracking-widest">{`LET'S SEE`}</span>
-        <span className="section-title">GALLERY OF THE EUPHORIA</span>
         <Link
           href="/products"
           className="flex items-center self-center gap-2 font-medium tracking-widest group"

@@ -65,7 +65,7 @@ const Footer = () => {
           <button className="px-6 py-4 text-sm font-medium uppercase duration-300 rounded-full footer-btn bg-rose-700 hover:text-rose-500 hover:bg-rose-50">
             + Написать сообщение
           </button>
-          <p className="text-lg font-medium">contact@euphoria.com</p>
+          <p className="text-lg font-medium">магазин_кожи@yandex.com</p>
         </div>
       </div>
 
