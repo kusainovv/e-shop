@@ -3,8 +3,12 @@ import { formatCurrency } from "@/utils/formatCurrency";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "@/components/CartItem";
 import { clearCart } from "@/store/productSlice";
+import { useState } from "react";
+import { Button, Form, Input, Modal, notification } from "antd";
 
 const CartPage = () => {
+  const [menu, setMenu] = useState(false);
+
   const products = useSelector((state) => state.myShop.products);
   const dispatch = useDispatch();
 
@@ -15,6 +19,23 @@ const CartPage = () => {
 
     return +prev + +r
   }, 0)
+
+  const [email, setEmail] = useState('');
+
+  const openNotification = () => {
+    notification.open({
+      message: '',
+      description:
+        'Мы отправим вам письмо для потдверждения почты'
+    });
+  };
+
+  const validateMessages = {
+    required: 'Поле ${label} обязательно!',
+    types: {
+      email: '${label} не валидный email!',
+    }
+  };
 
   return (
     <div className="cart-section wrapper my-20 min-h-screen max-[640px]:my-10 max-[640px]:text-[12px] max-[768px]:text-sm max-[1024px]:text-base max-[1024px]:px-5">
@@ -80,13 +101,67 @@ const CartPage = () => {
               <p className="text-gray-400  max-[640px]:hidden">
                 В данный момент действует скидка
               </p>
-              <button className="w-full py-5 font-medium tracking-widest text-center uppercase duration-300 checkout bg-cyan-500 text-cyan-50 hover:bg-cyan-600">
+              <button onClick={() => {
+                setMenu(true);
+              }} className="w-full py-5 font-medium tracking-widest text-center uppercase duration-300 checkout bg-cyan-500 text-cyan-50 hover:bg-cyan-600">
                 Купить
               </button>
             </div>
           </div>
         </>
       )}
+
+      <Modal footer={null} title="Оформите заказ" open={menu} onOk={() => {
+        setMenu(true)
+      }} onCancel={() => {
+        setMenu(false);
+      }}>
+        <Form
+            validateMessages={validateMessages}
+            onSubmitCapture={(e) => {
+              if (new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}').test(email)) {
+                setMenu(false);
+                openNotification();
+              }
+            }}  
+        >
+          <Form.Item
+            name={['user', 'email']} label="Email" 
+            rules={[
+              {
+                required: true,
+                message: 'Email обязателен',
+              },
+              {
+                message: ' ',
+                validator: (_, value) => {
+                  if (new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}').test(value)) {
+                    return Promise.resolve();
+                  } else {
+                    return Promise.reject('Email обязателен');
+                  }
+                 }
+               }
+             ]}
+            placeholder="Введите вашу почту"
+          >
+            <Input required type="email" onChange={(e) => {
+              setEmail(e.target.value);
+            }} />
+          </Form.Item>
+          
+          <Form.Item>
+            <Button style={{
+              display: 'flex',
+              marginLeft: 'auto',
+              marginTop: '10px',
+              background: 'rgb(9 84 253)',
+              color: 'white'
+            }} htmlType="submit">Отправить письмо</Button>
+          </Form.Item>
+        </Form>
+      </Modal>
+
     </div>
   );
 };
