@@ -1,6 +1,7 @@
 import { ImageAbout } from "@/components/ImageAbout";
 import LogoItemForAbout from "@/components/LogoItemForAbout";
 import Image from "next/image";
+import img from '../images/logo.png';
 
 const AboutPage = () => {
   const logos = [
@@ -57,6 +58,7 @@ const AboutPage = () => {
 
       <div className="wrapper">
         <div className="my-20 text-center">
+          <Image src={img} alt='logo' width={240} height={58} className="m-auto" />
           <p className="p-5 text-xl font-semibold tracking-widest text-black uppercase">
             Магазин Кожи
           </p>

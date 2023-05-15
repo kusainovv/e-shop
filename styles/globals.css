@@ -9,7 +9,7 @@
 }
 
 .linear-walkaways {
-  @apply relative before:absolute before:top-1/2 before:left-0 before:w-0 before:h-[1px] before:bg-rose-500 hover:before:w-full before:duration-300;
+  @apply relative p-1 duration-300 hover:text-white hover:bg-rose-500;
 }
 
 .counting-bubble {
