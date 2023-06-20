@@ -15,25 +15,25 @@ const items = [
   {
     key: '1',
     label: (
-      <Link href='/products/bag'>сумки</Link>
+      <Link href='/products/cnacti'>снасти</Link>
     ),
   },
   {
     key: '2',
     label: (
-      <Link href='/products/wallet'>кошелёк</Link>
+      <Link href='/products/katushki'>катушки</Link>
     ),
   },
   {
     key: '3',
     label: (
-      <Link href='/products/belt'>ремень</Link>
+      <Link href='/products/belt'>primanki</Link>
     ),
   },
   {
     key: '4',
     label: (
-      <Link href='/products/travel_bag'>дорожная сумка</Link>
+      <Link href='/products/wear'>одежда</Link>
     ),
   },
 ]
@@ -53,10 +53,9 @@ const Navbar = () => {
   }, [toggleOpen]);
 
   return (
-    <header className="flex items-center justify-between h-20 wrapper">
+    <header className="flex items-center justify-between h-20 wrapper min-h-[90px]">
         <Link href="/" className="flex items-center text-xl font-semibold">
-          <Image src={img} alt='logo' width={140} height={58} />
-          Магазин Кожи
+          <Image src={img} alt='logo' width={140} height={80} />
         </Link>
 
       <nav onClick={handleToggle} className="nav-links">

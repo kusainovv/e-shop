@@ -15,7 +15,7 @@ const Footer = () => {
             href="/"
             className="text-4xl font-semibold duration-300 md:text-2xl text-rose-500 hover:text-white"
           >
-            Магазин Кожи.
+            Магазин "КрючОК".
           </Link>
         </div>
         <div className="flex flex-col items-start footer-col-2">
@@ -65,12 +65,12 @@ const Footer = () => {
           <button className="px-6 py-4 text-sm font-medium uppercase duration-300 rounded-full footer-btn bg-rose-700 hover:text-rose-500 hover:bg-rose-50">
             + Написать сообщение
           </button>
-          <p className="text-lg font-medium">магазин_кожи@yandex.com</p>
+          <p className="text-lg font-medium">магазин_крючок@yandex.com</p>
         </div>
       </div>
 
       <p className="pt-20 text-center text-gray-400 uppercase border-t copyright border-gray-500/40 wrapper">
-        &copy; {new Date().getFullYear()} Магазин Кожи. Все права сохранены.
+        &copy; {new Date().getFullYear()} Магазин "КрючОК". Все права сохранены.
       </p>
     </footer>
   );

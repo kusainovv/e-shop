@@ -13,7 +13,7 @@ export default function App({ Component, pageProps, session }) {
   return (
     <>
       <Head>
-        <title>Магазин Кожи</title>
+        <title>Магазин "Крючок"</title>
       </Head>
 
       <SessionProvider session={session}>

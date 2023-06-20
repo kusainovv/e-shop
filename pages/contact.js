@@ -112,7 +112,7 @@ const ContactPage = () => {
           <div className="right flex flex-col gap-5 flex-[1]">
             <div>
               <p className="text-lg font-medium uppercase">
-                Адресс для возврата кожи
+                Адресс для возврата инвентаря
               </p>
               <p>г. Саратов, ул. Орджоникидзе, д. 54</p>
             </div>
@@ -125,13 +125,12 @@ const ContactPage = () => {
             <div>
               <p className="text-lg font-medium uppercase">Почта:</p>
               <p className="underline text-rose-500 underline-offset-2">
-                магазин_кожи@yandex.com
+                магазин_крючок@yandex.com
               </p>
             </div>
             <div>
               <p className="text-lg font-medium uppercase">График работы:</p>
-              <p>Пн-Сб: 10:00 - 20:00</p>
-              <p>Cб: 11:00 - 21:00</p>
+              <p>Пн-Вс: 09:00 - 23:00</p>
             </div>
           </div>
         </div>

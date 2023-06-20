@@ -1,7 +1,7 @@
 import { ImageAbout } from "@/components/ImageAbout";
 import LogoItemForAbout from "@/components/LogoItemForAbout";
 import Image from "next/image";
-import img from '../images/logo.png';
+import img from "../images/logo.png";
 
 const AboutPage = () => {
   const logos = [
@@ -43,8 +43,8 @@ const AboutPage = () => {
         <Image
           priority
           unoptimized
-          loader={() => "https://i.postimg.cc/QN53SCr8/XXL-1.webp"}
-          src={"https://i.postimg.cc/QN53SCr8/XXL-1.webp"}
+          loader={() => "https://i.ibb.co/mBTRFFT/fishing-top-1920.jpg"}
+          src={"https://i.ibb.co/mBTRFFT/fishing-top-1920.jpg"}
           width={50}
           height={25}
           alt={"Man Riding on Motorcycle"}
@@ -58,22 +58,21 @@ const AboutPage = () => {
 
       <div className="wrapper">
         <div className="my-20 text-center">
-          <Image src={img} alt='logo' width={240} height={58} className="m-auto" />
+          <Image
+            src={img}
+            alt="logo"
+            width={240}
+            height={58}
+            className="m-auto"
+          />
           <p className="p-5 text-xl font-semibold tracking-widest text-black uppercase">
-            Магазин Кожи
+            Магазин "КрючОК"
           </p>
           <p className="text-4xl px-[20rem] pb-5 font-extralight">
-            {`Мы "Магазин Кожи", который предлагает Вам огромный ассортимент
-            кожанных изделий`}
+            {`Мы "Магазин "Крючок", который предлагает Вам огромный ассортимент рыбаловочных изделий`}
           </p>
           <p className="px-[15rem] pb-5 text-xl font-light">
-            {`Натуральная кожа для пошива изделий по цене производителя. Новые
-            коллекции кожевенных заводов Италии, Турции и Кореи в Москве в
-            магазине "Магазин Кожи" на Орджоникидзе. Покупайте шкурки
-            натуральной кожи в розницу от одной пластины или оптом от одного
-            рулона. Выбирайте в нашем каталоге и собирайте в корзину ваш
-            онлайн-заказ. Мы посчитаем его стоимость, упакуем и доставим кожу в
-            любую точку России.`}
+            {`В нашем магазине Вы сможете найти все, что необходимо для хорошей рыбалки, туризма и активного отдыха, товары как отечественных производителей, так и зарубежных ведущих фирм! Спиннинги, катушки, приманки и другие рыболовные снасти. Экипировка и снаряжение для рыбалки и активного отдыха - большой выбор термобелья для мужчин и женщин!Демисезонные и зимние костюмы, перчатки, шапки, маски, балаклавы.`}
           </p>
         </div>
 
@@ -83,13 +82,12 @@ const AboutPage = () => {
 
         <div className="grid items-start justify-center grid-cols-2 p-20">
           <div className="text-4xl px-[5rem] pb-5 font-extralight">
-            <p>Это фотографии нашего магазина.</p>
+            <p>Это фотографии наших клиентов.</p>
           </div>
           <div className="px-[5rem] pb-5 text-xl font-light">
             <p>
               <b>
-                Чтобы найти наш магазин, вам нужно подойти ко 2-му подъезду со
-                стороны двора.
+                Чтобы получить скидку 5% выложите фотографию с нашим инвентарём!
               </b>
             </p>
           </div>

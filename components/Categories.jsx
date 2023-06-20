@@ -8,25 +8,25 @@ const Category = () => {
         <Link href={"products/bag"} className="sq-men sq-bag">
           <div className="overlay"></div>
           <h3 className="category-title-men">
-            <p>Сумка</p>
+            <p>Снасти</p>
           </h3>
         </Link>
         <Link href={"products/wallet"} className="sq-men sq-wallet">
           <div className="overlay"></div>
           <h3 className="category-title-men">
-            <p>Кошелек</p>
+            <p>Катушки</p>
           </h3>
         </Link>
         <Link href={"products/belt"} className="sq-men sq-belt">
           <div className="overlay"></div>
           <h3 className="category-title-men">
-            <p>Ремень</p>
+            <p>Приманки</p>
           </h3>
         </Link>
         <Link href={"products/travel_bag"} className="sq-men sq-travel-bag">
           <div className="overlay"></div>
           <h3 className="p-3 category-title-men">
-            <p>дорожная сумка</p>
+            <p>Одежда</p>
           </h3>
         </Link>
       </div>

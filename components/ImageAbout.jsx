@@ -8,10 +8,10 @@ export const ImageAbout = () => {
           <Image
             priority
             loader={() =>
-              "https://i.postimg.cc/prXd7cnH/XXL.webp"
+              "https://i.ibb.co/dc8BkxM/469ac486658eb6b0ef86cf1cc8b44200.jpg"
             }
             src={
-              "https://i.postimg.cc/prXd7cnH/XXL.webp"
+              "https://i.ibb.co/dc8BkxM/469ac486658eb6b0ef86cf1cc8b44200.jpg"
             }
             width={50}
             height={50}
@@ -22,10 +22,10 @@ export const ImageAbout = () => {
           <Image
             priority
             loader={() =>
-              "https://i.postimg.cc/C5XVNcGJ/XXL-2.webp"
+              "https://i.ibb.co/rFjvJzg/1596408743-f5.jpg"
             }
             src={
-              "https://i.postimg.cc/C5XVNcGJ/XXL-2.webp"
+              "https://i.ibb.co/rFjvJzg/1596408743-f5.jpg"
             }
             width={50}
             height={50}
@@ -37,10 +37,10 @@ export const ImageAbout = () => {
           <Image
             priority
             loader={() =>
-              "https://i.postimg.cc/x10SPNHw/XXL-3.webp"
+              "https://i.ibb.co/FsR1bv1/Hcb1f57374fe6445aa3983bd754820e286.jpg"
             }
             src={
-              "https://i.postimg.cc/x10SPNHw/XXL-3.webp"
+              "https://i.ibb.co/FsR1bv1/Hcb1f57374fe6445aa3983bd754820e286.jpg"
             }
             width={50}
             height={50}
@@ -51,10 +51,10 @@ export const ImageAbout = () => {
           <Image
             priority
             loader={() =>
-              "https://i.postimg.cc/ydSdz3Lf/XXL-4.webp"
+              "https://i.ibb.co/Pjxg4LQ/small-5b87f8e870a46.jpg"
             }
             src={
-              "https://i.postimg.cc/ydSdz3Lf/XXL-4.webp"
+              "https://i.ibb.co/Pjxg4LQ/small-5b87f8e870a46.jpgp"
             }
             width={50}
             height={50}

@@ -5,17 +5,17 @@ import Slide from "./Slide";
 const data = [
   {
     id: 1,
-    src: "https://www.javaid-leather.ru/images/slider/naturalnaya-kozha_8.jpg",
-    headline: "Натуральная кожа для пошива изделий",
-    body: "Натуральная кожа для пошива изделий по цене производителя. Новые коллекции кожевенных заводов Италии, Турции и Кореи в Москве в магазине Javaid Leather на Щербаковской.",
+    src: "https://i.ibb.co/K6S0P8q/6d43eaaf72e63a2ee69a6363f7c1-sumki-i-aksessuary-dorozhnaya-muzhskaya-kozhanaya-sumka-sport.jpg",
+    headline: "КрючОК - магазин для рыбалки и активного отдыха",
+    body: "Любите рыбалку, любите туризм - отдых может стать делом всей Вашей жизни! Наш телефон 8-962-704-5966. Мы работаем для Вас с 9.00 до 21.00",
     cta: "Поспешите!",
   },
   {
     id: 2,
-    src: "https://www.javaid-leather.ru/images/slider/naturalnaya-kozha_5.jpg",
-    headline: "Черная кожа - наш выбор!",
-    body: "Черный цвет. Элегантный. Красивый",
-    cta: "Черная кожа",
+    src: "https://i.ibb.co/DDg0htc/best-fishing-times-twitter.jpg",
+    headline: "Снасти, крючки, спец. защита",
+    body: "В наличии теплые, непромокаемые, дышащие костюмы с мембраной Gamakatsu (Япония), зимние костюмы Alaskan (-25 С), (-30 С) - в таком костюме будет комфортно и тепло не только на рыбалке, охоте или активном отдыхе, но и в повседневной жизни!",
+    cta: "Поспешите!",
   },
 ];
 
